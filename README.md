@@ -51,3 +51,7 @@ dtoverlay=vc4-kms-v3d
 sudo reboot
 
 ./rpiplay -n "rpiplay-01" -vr rpi -ar rpi -a hdmi
+
+## Reference
+
+https://github.com/FD-/RPiPlay/issues/296#issuecomment-981210609
