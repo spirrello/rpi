@@ -8,23 +8,11 @@ sudo apt update
 
 sudo apt upgrade
 
-  
- 
-
 sudo rpi-update
-
-  
- 
 
 sudo reboot
 
-  
- 
-
 sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
-
-  
- 
 
 sudo apt-get install git
 
@@ -54,21 +42,12 @@ sudo ln -s /usr/lib/arm-linux-gnueabihf/libGLESv2.so /usr/lib/libbrcmGLESv2.so
 
 sudo ln -s /usr/lib/arm-linux-gnueabihf/libEGL.so /usr/lib/libbrcmEGL.so
 
-\`\`\`
-
 comment out this line _in_ /boot/config.txt
 
+```
 dtoverlay=vc4-kms-v3d
-
-\`\`\`
-
-  
- 
+```
 
 sudo reboot
-
-  
-  
- 
 
 ./rpiplay -n "rpiplay-01" -vr rpi -ar rpi -a hdmi
