@@ -5,7 +5,7 @@ Description=example systemd service unit file.
 Restart=always
 RestartSec=5s
 
-ExecStart=/home/pi/RPiPlay/build/rpiplay -n rpiplay -vr rpi -ar rpi -a hdmi
+ExecStart=/home/pi/RPiPlay/build/rpiplay -n rpiplay -vr rpi -ar rpi -a hdmi -l
 
 [Install]
 WantedBy=multi-user.target
