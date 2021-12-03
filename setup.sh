@@ -54,6 +54,12 @@ setup_systemd () {
     sudo systemctl start rpiplay
 }
 
+restart () {
+    PID=$(ps aux | grep rpiplay | awk '{print $2}' | head -1)
+
+    sudo kill -9 $PID
+}
+
 while [ -n "$1" ]; do # while loop starts
 
 	case "$1" in
@@ -68,6 +74,10 @@ while [ -n "$1" ]; do # while loop starts
 
     -systemd)
 	setup_systemd
+    ;;
+
+    -restart)
+	restart
     ;;
 
 	esac
